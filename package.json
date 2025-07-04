@@ -1,0 +1,24 @@
+{
+  "dependencies": {
+    "dotenv": "^17.0.1"
+  },
+  "name": "js-apis",
+  "version": "1.0.0",
+  "description": "Learning about APIs",
+  "main": "github.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joykahugu/js-apis.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/joykahugu/js-apis/issues"
+  },
+  "homepage": "https://github.com/joykahugu/js-apis#readme"
+}
