@@ -15,7 +15,7 @@ async function getAllRepos() {
 
         if (!response.ok) {
             console.log("Error fetching user data: ", response.statusText);
-            break;
+            break;//to prevent looping if there's an error or access denied 
         }
 
 
@@ -28,7 +28,7 @@ async function getAllRepos() {
         allRepos = allRepos.concat(repos);
         page++
 
-        console.log(`Toatal repos: ${allRepos.length}`)
+        console.log(`Total repos: ${allRepos.length}`)
         repos.forEach(repo => {
             console.log(`${repo.name}: ${repo.html_url}`);
         })
