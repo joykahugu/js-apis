@@ -2,7 +2,7 @@ import 'dotenv/config'
 const token = process.env.GITHUB_TOKEN; //AUTHORIZATION TOKEN
 async function getGitHubUser() {
     const response = await fetch("https://api.github.com/user/repos", {
-        headers: {     //how to authorize using toke, include it as an argument of fetch
+        headers: {     //how to authorize using token, include it as an argument of fetch
             Authorization: `token ${token}` 
         }
     });
@@ -13,7 +13,7 @@ async function getGitHubUser() {
         return;
     }
 
-    const data = await response.json(); //since it's a function that calls data from json file
+    const data = await response.json(); //converts response to json since it's a function that calls data from json file
     data.forEach(repo => {
         console.log(`${repo.name}: ${repo.html_url}`);
     })
